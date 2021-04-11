@@ -1,6 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import Subscribe from "../components/subscribe";
 import { Facebook, Instagram, Twitter, Linkedin } from "react-bootstrap-icons";
+import App from "../App";
+import ExternalPortfolio from "../components/externalPortfolio";
 
 export default function Footer() {
   return (
@@ -34,13 +38,14 @@ export default function Footer() {
           </div>
           <div className="col-lg-2 col-md-3 col-12 order-md-2 order-1 offset-lg-1 mb-md-0 mb-4">
             <h3 className="h6 mb-3 text-uppercase text-light">Quick links</h3>
+
             <ul className="nav nav-light flex-md-column flex-sm-row flex-column">
               <li className="nav-item mb-2">
                 <a
-                  href="index.html"
+                  href="/"
                   className="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal"
                 >
-                  Homepage
+                  Portfolio
                 </a>
               </li>
               <li className="nav-item mb-2">
@@ -69,10 +74,10 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <a
-                  href="contacts.html"
+                  href="/contact"
                   className="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal"
                 >
-                  Contacts
+                  Contact
                 </a>
               </li>
             </ul>

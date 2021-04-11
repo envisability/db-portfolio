@@ -1,15 +1,12 @@
 import React from "react";
 
-function Contact(props) {
+function ExternalPortfolio(props) {
   return (
     <section class="container mb-4 mb-sm-5 mt-3 mt-md-4 mt-lg-0 px-3 py-lg-6 py-5">
-      <h2 class="h3 mb-5 pb-2 text-center">
-        Let's build something amazing together!
-      </h2>
       <div class="row justify-content-center px-2 px-sm-0">
         <div class="col-md-3 col-sm-4 col px-2 px-sm-3">
           <h3 class="h6 pb-lg-3 pb-2 text-uppercase text-muted text-center">
-            Follow us
+            Follow Me
           </h3>
           <a class="d-block" href="#">
             <img
@@ -51,4 +48,4 @@ function Contact(props) {
   );
 }
 
-export default Contact;
+export default ExternalPortfolio;

@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
-import Header from "./shared/Header";
-import Hero from "./components/Hero";
-import Gallery from "./components/Gallery";
+import Contact from "./pages/contact";
+import Home from "./pages/home";
 import Footer from "./shared/Footer";
-import Services from "./components/Services";
-import Goal from "./components/goal";
-import Contact from "./components/contact";
+import Header from "./shared/Header";
 
 const App = () => {
   return (
     <main>
-      {/*  Push the footer to the bottom of the page */}
       <div className="db-page-wrapper">
         <Header />
-        <Hero />
-        <Goal />
-        <Gallery />
-        {/*<Services />*/}
-        <Contact />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </Router>
       </div>
       <Footer />
     </main>
