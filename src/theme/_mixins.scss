@@ -1,0 +1,31 @@
+@use "sass:math";
+
+// Grid
+@mixin col-width($index, $col-size) {
+  $width: $index / 12;
+  .#{$col-size}-#{$index} {
+    flex-basis: percentage($width);
+    max-width: percentage($width);
+  }
+}
+
+@mixin col-base($gutter){
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+
+@mixin make-container() {
+  width: 100%;
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin opacity-variant($class, $value) {
+  .opacity-#{$class} {
+    opacity: $value !important;
+  }
+}

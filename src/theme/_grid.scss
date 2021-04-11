@@ -1,0 +1,64 @@
+@use "sass:math";
+.container-fluid, .container {
+  @include make-container();
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $grid-gutter-width;
+  margin-left: $gutter-compensation;
+}
+
+// Set basic styles for col-xs
+//.col-xs{
+//  @include col-base($half-gutter-width);
+//}
+//
+//@for $i from 1 through 12 {
+//  .col-xs-#{$i} {
+//    @include col-base($half-gutter-width);
+//  }
+//}
+//
+//.col-xs {
+//  flex-grow: 1;
+//  flex-basis: 0;
+//  max-width: 100%;;
+//}
+//
+////todo: Add support for offset
+//
+//// Define various column width for extra small
+//@for $i from 1 through 12 {
+//  $width: $i/12;
+//  @include col-width($i, col-xs);
+//}
+
+@each $med, $size in $grid-breakpoints {
+  @media only screen and (min-width: $size){
+    .col-#{$med}{
+      @include col-base($half-gutter-width);
+    }
+    // Apply the same style to all size columns
+    @for $i from 1 through 12 {
+      .col-#{$med}-#{$i} {
+        @include col-base($half-gutter-width);
+      }
+    }
+    .col-#{$med}{
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+    }
+    @for $i from 1 through 12 {
+      $width: $i/12;
+      @include col-width($i, col-#{$med});
+    }
+  }
+}
+
+

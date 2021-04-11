@@ -1,0 +1,269 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "funcs";
+@import "variables";
+@import "custom-variables";
+@import "mixins";
+@import "icons";
+@import "nav";
+// @import "grid";
+@import "utils";
+@import "parallax";
+
+:root{
+  --font-family-sans-serif: "Lato", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+}
+
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// Main content
+main{
+  display: block;
+}
+
+.db-page-wrapper{
+  flex: 1 0 auto;
+  position:relative !important;
+}
+
+// Backgrounds
+.bg-secondary{
+  background-color: $secondary-background;
+}
+
+// Types
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.h1{
+  font-weight: 900;
+  line-height: 1.25;
+  font-size: calc(1.575rem + 3.9vw);
+}
+
+.h3{
+  font-weight: 700;
+  line-height: 1.35;
+}
+.h6{
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.lead{
+  font-size: 1.25rem !important;
+  font-weight: 400;
+}
+.text-light{
+  color:$white !important;
+}
+
+.text-uppercase{
+  letter-spacing: 0.0625rem !important;
+}
+
+.font-size-sm {
+  font-size: .875rem !important;
+}
+
+.text-muted {
+  color: #787a80 !important;
+}
+
+
+.display-1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+// Carousel
+.carousel{
+  padding:15px;
+}
+
+// Social
+.social-btn {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  padding: initial;
+  border: 1px solid transparent;
+  color: #787a80;
+  transition: border-color 0.25s ease-in-out,background-color 0.25s ease-in-out,color 0.25s ease-in-out;
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sb-round {
+  border-radius: 50%;
+}
+
+.social-btn.sb-solid.sb-light {
+  background-color: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+
+.social-btn.sb-solid {
+  background-color: rgba(120,122,128,0.12);
+  > i {
+    line-height: 1.875rem;
+  }
+}
+.social-btn.sb-solid, .social-btn.sb-outline {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+.social-btn.sb-light {
+  color: rgba(255,255,255,0.6);
+}
+.sb-round {
+  border-radius: 50%;
+}
+
+.social-btn.sb-solid, .social-btn.sb-outline {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+btn.sb-solid.sb-light {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+[class^='input-group'].input-group-light .form-control {
+  background-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.input-group-overlay {
+  position: relative;
+  width: 100%;
+}
+
+.input-group-append-overlay {
+  right: 0;
+}
+
+.input-group-append-overlay, .input-group-prepend-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 5;
+  .btn {
+    color: $white;
+    transition: 0.3s;
+  }
+  .input-group-text{
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.btn > i {
+  vertical-align: middle;
+}
+
+
+// Icons
+.icon-light{
+  color: white;
+  line-height: 1.875rem;
+}
+
+// Hero styles
+.hero{
+  min-height: 100vh !important; //Fill the viewport height
+  background-color: $dark-background;
+  padding-bottom: 3rem !important;
+  padding-top: 3rem !important;
+  margin-bottom: .5rem;
+  justify-content: center !important;
+  .container{
+    justify-content: space-between !important;
+    z-index: 5;
+  }
+  .jarallax{
+
+  }
+}
+
+// Portfolio
+.gallery{
+  color: $dark-blue;
+  background-color: $secondary-background !important;
+  .carousel-caption{
+    position: relative;
+    padding-top: 40px;
+    text-align: left;
+    left: 5%;
+  }
+}
+
+.cs-portfolio-card-body {
+  position: relative;
+  padding: $portfolio-card-body-padding-y $portfolio-card-body-padding-x;
+  z-index: 2;
+}
+
+.cs-portfolio-card-title {
+  margin-bottom: $spacer * .25;
+  font-weight: $portfolio-card-title-font-weight;
+  transition: color .3s ease-in-out;
+  color: $portfolio-card-title-color;
+  @include font-size($portfolio-card-title-font-size);
+}
+
+//.tns-item{
+//  width: calc(6.25%);
+//}
+
+
+// Footer
+footer{
+  .icon-light{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  h3, .h3{
+    font-size: calc(1.3rem + .6vw);
+  }
+  .display-1{
+    font-size: calc(1.575rem + 3.9vw);
+  }
+}
+
+
