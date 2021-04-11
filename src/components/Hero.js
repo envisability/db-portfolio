@@ -22,7 +22,7 @@ export default function Hero() {
 
   return (
     <section
-      className=" container hero jarallax d-flex align-items-stretch"
+      className="  hero jarallax d-flex align-items-stretch"
       ref={jlxRef}
     >
       <span className="bg-overlay opacity-60"></span>

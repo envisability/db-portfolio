@@ -8,13 +8,11 @@ function Home(props) {
   return (
     <React.Fragment>
       {/*  Push the footer to the bottom of the page */}
-      <div className="db-page-wrapper">
-        <Hero />
-        <Goal />
-        <Gallery />
-        {/*<Services />*/}
-        <ExternalPortfolio />
-      </div>
+      <Hero />
+      <Goal />
+      <Gallery />
+      {/*<Services />*/}
+      <ExternalPortfolio />
     </React.Fragment>
   );
 }
