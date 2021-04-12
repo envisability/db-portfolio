@@ -2,15 +2,19 @@ import React from "react";
 
 function Goal(props) {
   return (
-    <section className="container py-5 py-lg-6 text-center">
-      <div className="row justify-content-center mb-lg-6 mb-5">
+    <section className="container py-5 py-lg-6 ">
+      <div className="row text-center justify-content-center">
         <div className="col-lg-8 col-md-10">
           <h2 className="h6 mb-3 pb-1 text-uppercase">Project goal</h2>
-          <p className="h3 mb-lg-6 mb-5 pb-lg-4">
+          <p className="h3 mb-lg-6 mb-5 pb-lg-4 ">
             Consectetur adipiscing elit. Nullam laoreet magna eget suscipit
             luctus. Donec sit amet orci a felis
           </p>
-          <div className="row mb-lg-6 mt-5">
+        </div>
+      </div>
+      <div className="row justify-content-center mb-lg-6 mb-5">
+        <div className="col-lg-8 col-md-10">
+          <div className="row mb-lg-6 justify-content-center">
             <div className="col-lg-8 col-md-10">
               <p className="mb-0 text-muted">
                 Aenean vitae aliquet convallis vitae, elit volutpat sodales.
