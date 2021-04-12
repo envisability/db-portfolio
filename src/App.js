@@ -5,6 +5,7 @@ import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Footer from "./shared/Footer";
 import Header from "./shared/Header";
+import Portfolio from "./pages/portfolio";
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/portfolio">
+              <Portfolio />
             </Route>
             <Route exact path="/contact">
               <Contact />

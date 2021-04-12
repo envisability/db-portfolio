@@ -45,12 +45,12 @@ export default function Footer() {
                   href="/"
                   className="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal"
                 >
-                  Portfolio
+                  Home
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a
-                  href="portfolio.html"
+                  href="/portfolio"
                   className="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal"
                 >
                   Portfolio

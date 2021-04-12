@@ -3,11 +3,13 @@
 @import "variables";
 @import "custom-variables";
 @import "mixins";
+@import "spacing";
 @import "icons";
 @import "nav";
 // @import "grid";
 @import "utils";
 @import "parallax";
+@import "portfolio";
 
 :root{
   --font-family-sans-serif: "Lato", sans-serif;
@@ -62,7 +64,7 @@ p{
 .h1{
   font-weight: 900;
   line-height: 1.25;
-  font-size: calc(1.575rem + 3.9vw);
+  //font-size: calc(1.575rem + 3.9vw);
 }
 
 .h3{
@@ -197,7 +199,10 @@ btn.sb-solid.sb-light {
 }
 
 .navbar{
-  a{
+  .navbar-brand{
+    img{
+      width: 50%;
+    }
   }
 }
 
@@ -233,6 +238,14 @@ btn.sb-solid.sb-light {
     padding-top: 40px;
     text-align: left;
     left: 5%;
+  }
+}
+
+.portfolio-grid{
+  background-image: url("../assets/page-bg.png");
+  background-color: $white !important;
+  .cs-grid-item{
+    //flex-direction: row;
   }
 }
 
