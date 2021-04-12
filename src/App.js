@@ -11,7 +11,7 @@ const App = () => {
   return (
     <main>
       <div className="db-page-wrapper">
-        <Header />
+        <Header theme="dark" />
         <Router>
           <Switch>
             <Route exact path="/">
