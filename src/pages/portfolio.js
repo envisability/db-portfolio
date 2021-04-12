@@ -87,27 +87,98 @@ function Portfolio(props) {
           </div>
 
           <div className="row">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className={`cs-grid-item ${item.category} col-md-8 pb-lg-2 mb-4 `}
+            <div className="cs-grid-item web-design col-md-4 col-sm-6 pb-lg-2 mb-4">
+              <a
+                className="cs-portfolio-card-scale"
+                href="portfolio-single-v1.html"
               >
-                <a
-                  className="cs-portfolio-card-scale"
-                  href="portfolio-single-v1.html"
-                >
-                  <div className="cs-portfolio-card-img">
-                    <img src={item.img.src} alt={item.img.alt} />
-                  </div>
-                  <div className="cs-portfolio-card-body">
-                    <h3 className="cs-portfolio-card-title">{item.title}</h3>
-                    <span className="font-size-sm text-muted">
-                      {item.category}
-                    </span>
-                  </div>
-                </a>
-              </div>
-            ))}
+                <div className="cs-portfolio-card-img">
+                  <img src="images/portfolio/DSC_0774.jpg" alt="Card image" />
+                </div>
+                <div className="cs-portfolio-card-body">
+                  <h3 className="cs-portfolio-card-title">Adventure Gear </h3>
+                  <span className="font-size-sm text-muted">
+                    Charcoal Reduction
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div className="cs-grid-item mobile-apps col-md-4 col-sm-6 pb-lg-2 mb-4">
+              <a
+                className="cs-portfolio-card-scale"
+                href="portfolio-single-v2.html"
+              >
+                <div className="cs-portfolio-card-img">
+                  <img src="images/portfolio/DSC_0802.jpg" alt="Card image" />
+                </div>
+                <div className="cs-portfolio-card-body">
+                  <h3 className="cs-portfolio-card-title">
+                    Oil Painting Tubes
+                  </h3>
+                  <span className="font-size-sm text-muted">Oil Painting</span>
+                </div>
+              </a>
+            </div>
+            <div className="cs-grid-item branding col-md-4 col-sm-6 pb-lg-2 mb-4">
+              <a
+                className="cs-portfolio-card-scale"
+                href="portfolio-single-v1.html"
+              >
+                <div className="cs-portfolio-card-img">
+                  <img src="images/portfolio/DSC_0768.jpg" alt="Card image" />
+                </div>
+                <div className="cs-portfolio-card-body">
+                  <h3 className="cs-portfolio-card-title">Time Stamp</h3>
+                  <span className="font-size-sm text-muted">Ink Painting</span>
+                </div>
+              </a>
+            </div>
+            <div className="cs-grid-item branding col-md-4 col-sm-6 pb-lg-2 mb-4">
+              <a
+                className="cs-portfolio-card-scale"
+                href="portfolio-single-v1.html"
+              >
+                <div className="cs-portfolio-card-img">
+                  <img src="images/portfolio/DSC_0801.jpg" alt="Card image" />
+                </div>
+                <div className="cs-portfolio-card-body">
+                  <h3 className="cs-portfolio-card-title">Brush Cleaner</h3>
+                  <span className="font-size-sm text-muted">Oil Painting</span>
+                </div>
+              </a>
+            </div>
+            <div className="cs-grid-item branding col-md-4 col-sm-6 pb-lg-2 mb-4">
+              <a
+                className="cs-portfolio-card-scale"
+                href="portfolio-single-v1.html"
+              >
+                <div className="cs-portfolio-card-img">
+                  <img src="images/portfolio/DSC_0790.jpg" alt="Card image" />
+                </div>
+                <div className="cs-portfolio-card-body">
+                  <h3 className="cs-portfolio-card-title">Faceless Soccer</h3>
+                  <span className="font-size-sm text-muted">Oil Painting</span>
+                </div>
+              </a>
+            </div>
+            {/*{items.map((item, index) => (*/}
+            {/*  <div*/}
+            {/*    key={index}*/}
+            {/*    className={`cs-grid-item ${item.category} col-md-8 pb-lg-2 mb-4 `}*/}
+            {/*  >*/}
+            {/*    <a className="cs-portfolio-card-scale" href="/">*/}
+            {/*      <div className="cs-portfolio-card-img">*/}
+            {/*        <img src={item.img.src} alt={item.img.alt} />*/}
+            {/*      </div>*/}
+            {/*      <div className="cs-portfolio-card-body">*/}
+            {/*        <h3 className="cs-portfolio-card-title">{item.title}</h3>*/}
+            {/*        <span className="font-size-sm text-muted">*/}
+            {/*          {item.category}*/}
+            {/*        </span>*/}
+            {/*      </div>*/}
+            {/*    </a>*/}
+            {/*  </div>*/}
+            {/*))}*/}
           </div>
         </div>
         <div className="mt-lg-4 text-center">
