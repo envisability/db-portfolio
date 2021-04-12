@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Header(props): JSX.Element {
   // Implement sticky
@@ -42,7 +43,7 @@ export default function Header(props): JSX.Element {
       className={`cs-header navbar navbar-expand-md ${theme} navbar-sticky navbar-floating ${stuck}`}
     >
       <div className="container px-0 px-xl-3">
-        <a className="navbar-brand order-md-1 mr-md-5 mr-0 pr-lg-2" href="/">
+        <Link to="/" className="navbar-brand order-md-1 mr-md-5 mr-0 pr-lg-2">
           <img
             className="navbar-brand-static"
             src={logo}
@@ -55,7 +56,7 @@ export default function Header(props): JSX.Element {
             alt="david barel logo"
             width="130"
           />
-        </a>
+        </Link>
 
         <nav
           className="collapse navbar-collapse order-md-2"
@@ -63,19 +64,23 @@ export default function Header(props): JSX.Element {
         >
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/portfolio" data-toggle="dropdown">
+              <Link
+                to="/portfolio"
+                className="nav-link"
+                activeClassName="active"
+              >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact" data-toggle="dropdown">
+              <Link to="/contact" className="nav-link" activeClassName="active">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

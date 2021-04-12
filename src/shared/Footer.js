@@ -88,13 +88,13 @@ export default function Footer() {
               href="#"
               className="social-btn sb-solid sb-round sb-light mr-2 mb-2 mt-md-0 mt-sm-1"
             >
-              <i className="cxi-facebook"></i>
+              <i className="cxi-facebook" />
             </a>
             <a
               href="#"
               className="social-btn sb-solid sb-round sb-light mr-2 mb-2 mt-md-0 mt-sm-1"
             >
-              <i className="cxi-instagram"></i>
+              <i className="cxi-instagram" />
             </a>
             <a
               href="#"
@@ -106,13 +106,13 @@ export default function Footer() {
               href="#"
               className="social-btn sb-solid sb-round sb-light mr-2 mb-2 mt-md-0 mt-sm-1"
             >
-              <i className="cxi-behance"></i>
+              <i className="cxi-behance" />
             </a>
             <a
               href="#"
               className="social-btn sb-solid sb-round sb-light mb-2 mt-md-0 mt-sm-1"
             >
-              <i className="cxi-dribbble"></i>
+              <i className="cxi-dribbble" />
             </a>
           </div>
           <div className="col-md-3 col-sm-6 order-md-4 order-sm-3 order-4 mb-md-0 mb-4">

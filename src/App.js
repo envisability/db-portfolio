@@ -10,9 +10,9 @@ import Portfolio from "./pages/portfolio";
 const App = () => {
   return (
     <main>
-      <div className="db-page-wrapper">
-        <Header theme="dark" />
-        <Router>
+      <Router>
+        <div className="db-page-wrapper">
+          <Header theme="dark" />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -24,9 +24,9 @@ const App = () => {
               <Contact />
             </Route>
           </Switch>
-        </Router>
-      </div>
-      <Footer />
+        </div>
+        <Footer />
+      </Router>
     </main>
   );
 };
