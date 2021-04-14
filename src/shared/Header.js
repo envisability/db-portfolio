@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import React, { useEffect, useState, useContext } from "react";
 import logo from "../logo.svg";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../StateProvider/appStateProvider";
 
 export default function Header(props): JSX.Element {
   // Implement sticky
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState(props.theme);
+  const [theme, setTheme] = useContext(ThemeContext);
+
+  let floatingClass = "";
+  useEffect(() => {
+    // Add floating element if needed
+    if (theme.currentTheme.isFloating) {
+    }
+  });
+
+  // Stick the header upon scrolling
   const scrollHandler = () => {
     const winOffset = window.scrollY;
     if (winOffset > 200) {
@@ -18,29 +25,34 @@ export default function Header(props): JSX.Element {
     }
   };
 
-  //define the classes for the header
-  let stuck = "";
-  let navbarTheme = "";
-  // if (props.theme == "dark") {
-  //   navbarTheme = "navbar-dark";
-  // } else {
-  //   navbarTheme = "navbar-light";
-  // }
+  const toggleTheme = () => {
+    if (theme.currentTheme === "light") {
+      setTheme.currentTheme = "dark";
+    } else {
+      setTheme.currentTheme = "light";
+    }
+  };
 
   useEffect(() => {
+    // Handle scroll stuck
     window.addEventListener("scroll", scrollHandler);
+    // Handle theme color changes based on page input
+    toggleTheme();
   });
+
+  //define the classes for the header
+  let stuck = "";
 
   if (scrolled) {
     stuck = "navbar-stuck";
-    //theme = "navbar-light";
   } else {
     stuck = "";
   }
 
   return (
     <header
-      className={`cs-header navbar navbar-expand-md ${theme} navbar-sticky navbar-floating ${stuck}`}
+      className={`cs-header navbar navbar-expand-md ${theme.currentTheme}   
+      ${theme.isFloating ? theme.floatingClass : "x"} navbar-sticky ${stuck}`}
     >
       <div className="container px-0 px-xl-3">
         <Link to="/" className="navbar-brand order-md-1 mr-md-5 mr-0 pr-lg-2">

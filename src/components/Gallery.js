@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { ThemeContext } from "../StateProvider/appStateProvider";
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  const [theme, setTheme] = useContext(ThemeContext);
+  useEffect(
+    () =>
+      setTheme((prevState) => ({
+        ...prevState,
+        isFloating: false,
+      })),
+    []
+  );
 
   const galleryData = [
     {

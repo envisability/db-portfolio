@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import ContactForm from "../components/contactForm";
 import ExternalPortfolio from "../components/externalPortfolio";
+import { ThemeContext } from "../StateProvider/appStateProvider";
 
 function Contact(props) {
+  const [theme, setTheme] = useContext(ThemeContext);
+  useEffect(
+    () =>
+      setTheme((prevState) => ({
+        ...prevState,
+        isFloating: false,
+      })),
+    []
+  );
+
   return (
     <section className="container my-5 pt-md-4">
       <div>
